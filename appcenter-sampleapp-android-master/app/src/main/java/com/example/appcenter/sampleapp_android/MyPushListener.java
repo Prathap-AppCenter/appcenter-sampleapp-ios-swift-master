@@ -1,5 +1,19 @@
+package com.example.appcenter.sampleapp_android;
+
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.widget.Toast;
+
+import com.example.appcenter.sampleapp_android.R;
+import com.microsoft.appcenter.push.PushListener;
+import com.microsoft.appcenter.push.PushNotification;
+
+import java.util.Map;
+
 public class MyPushListener implements PushListener {
 
+    @SuppressLint("StringFormatInvalid")
     @Override
     public void onPushNotificationReceived(Activity activity, PushNotification pushNotification) {
 
