@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        
+        Push.setListener(new MyPushListener());
         AppCenter.start(getApplication(), "f589cf8f-48ae-4da8-aff0-45b32bae65de",
                 Analytics.class, Crashes.class , Push.class);
         super.onCreate(savedInstanceState);
