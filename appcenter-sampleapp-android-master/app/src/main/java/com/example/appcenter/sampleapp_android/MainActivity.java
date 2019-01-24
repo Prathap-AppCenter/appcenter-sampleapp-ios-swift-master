@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.analytics.Analytics;
 import com.microsoft.appcenter.crashes.Crashes;
+import com.microsoft.appcenter.push.Push;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -20,8 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        AppCenter.start(getApplication(), "<APP SECRET HERE>",
-                Analytics.class, Crashes.class);
+        AppCenter.start(getApplication(), "f589cf8f-48ae-4da8-aff0-
+45b32bae65de",
+                Analytics.class, Crashes.class , Push.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_root);
 
